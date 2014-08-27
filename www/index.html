@@ -5,10 +5,13 @@
 
     <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
     <script type="text/javascript" charset="utf-8">
-
+	 document.addEventListener("deviceready", function(){
+      alert("123");
+ },true);
+		//window.open('http://www.smapps.nl', '_blank', 'location=yes');
     </script>
   </head>
   <body>
-  <a href="#" onClick="window.open('http://www.smapps.nl', '_blank', 'location=yes'); return false">test</a>
+  <a href="#" onClick="window.open('http://www.smapps.nl', '_blank', 'location=yes'); return false;">test</a>
   </body>
 </html>
