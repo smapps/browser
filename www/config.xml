@@ -14,11 +14,13 @@
     </description>
 
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
+	<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+	<plugin name="InAppBrowser" value="CDVInAppBrowser" />	
     
     <preference name="orientation" value="portrait" />
 	<preference name="fullscreen" value="true" />
 	<preference name="DisallowOverscroll" value="true" />
-	<preference name="phonegap-version" value="3.0.0" />
+	<preference name="phonegap-version" value="3.5.0" />
 	
 	
 	<icon src="./images/icon.png" gap:platform="ios" width="57" height="57" />
