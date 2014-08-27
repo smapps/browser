@@ -7,10 +7,10 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Panoston</name>
+    <name>SMAPPS</name>
 
     <description>
-	iPhone version of Panoston Cross Over Concept
+	SMAPPS site in APP
     </description>
 
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
