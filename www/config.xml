@@ -19,7 +19,7 @@
     
     <preference name="orientation" value="portrait" />
 	<preference name="fullscreen" value="true" />
-	<preference name="StatusBarOverlaysWebView" value="false" />
+	
 	<preference name="DisallowOverscroll" value="true" />
 	<preference name="phonegap-version" value="3.5.0" />
 	
@@ -41,16 +41,6 @@
 	<gap:splash gap:platform="ios" height="480" src="./images/screen-iphone-portrait.png" width="320" />
 	<gap:splash gap:platform="ios" height="960" src="./images/screen-iphone-portrait-2x.png" width="640" />
 	<gap:splash gap:platform="ios" height="1024" src="./images/screen-ipad-portrait.png" width="768" />
-	
-	<gap:plugin name="com.phonegap.plugin.statusbar" />
-	
-	<gap:config-file platform="ios" patent="UIStatusBarHidden">
-		<true/>
-	</gap:config-file>
-	
-	<gap:config-file platform="ios" patent="UIViewControllerBasedStatusBarAppearance">
-		<false/>
-	</gap:config-file>
 	
 	
     <author href="https://www.smapps.nl" email="slimmejongens@smapps.nl">
