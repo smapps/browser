@@ -16,6 +16,7 @@
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
 	<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
 	<plugin name="InAppBrowser" value="CDVInAppBrowser" />	
+	<gap:plugin name="edu.uic.travelmidwest.cordova.udptransmit" version="0.0.1" />
     
     <preference name="orientation" value="portrait" />
 	<preference name="fullscreen" value="true" />

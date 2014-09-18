@@ -91,15 +91,29 @@
 					}
 			 */
 
-			window.open('http://www.smapps.nl', '_blank', 'location=yes');
+			//window.open('http://www.smapps.nl', '_blank', 'location=yes');
 
 		});
 
+		$("#button").on("touchstart", function () {
+			this.html('12345789');
+			udptransmit.initialize("192.168.1.100", 50000);
+		});
+		
 		app.initialize();
 
-    </script>
+		//To use in the JavaScript of a project:
+
+		//// Simple usage, initialize once, setting the IP address and port of the intended receiver
+		//udptransmit.initialize("131.193.42.36", 4445);
+
+		//// Then send messages over and over
+		//udptransmit.sendMessage("Hello from my mobile app.”);
+		//udptransmit.sendMessage(“Another message”);
+		//udptransmit.sendMessage(“Yet another message”);
+	</script>
   </head>
   <body>
-  <a href="#" onClick="window.open('http://www.smapps.nl', '_blank', 'location=yes'); return false;">test</a>
+  <div id="button" style="height: 200px; width:200px;background-color: #FFF000;">asdfsadfasdf</div>
   </body>
 </html>
