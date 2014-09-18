@@ -93,13 +93,14 @@
 			 */
 
 			//window.open('http://www.smapps.nl', '_blank', 'location=yes');
-
-		});
-
-		$("#button").click( function () {
+			udptransmit.initialize("192.168.1.100", 50000);
+			udptransmit.sendMessage("[0x21, 0x00, 0x55]");
+			
+					$("#button").click( function () {
 			//udptransmit.initialize("192.168.1.100", 50000);
 			//udptransmit.sendMessage("[0x21, 0x00, 0x55]");
 			alert('asdfasdf');
+		});
 		});
 		
 		app.initialize();
