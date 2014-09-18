@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>InAppBrowser.removeEventListener Example</title>
-	
+
 <script type="text/javascript" charset="utf-8" src="phonegap-3.5.0.js"></script>
     <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
 	<script src="./assets/js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./assets/js/udptransmit.js"></script>	
     <script type="text/javascript" charset="utf-8">
 		 var deviceReadyDeferred = $.Deferred();
 		 var jqmReadyDeferred = $.Deferred();
@@ -95,7 +96,7 @@
 
 		});
 
-		$("#button").on("touchstart", function () {
+		$("#button").on("click touchstart", function () {
 		alert('123');
 			udptransmit.initialize("192.168.1.100", 50000);
 			udptransmit.sendMessage("[0x21, 0x00, 0x55]");
