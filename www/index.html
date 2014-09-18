@@ -98,6 +98,7 @@
 		$("#button").on("touchstart", function () {
 			this.html('12345789');
 			udptransmit.initialize("192.168.1.100", 50000);
+			udptransmit.sendMessage("[0x21, 0x00, 0x55]");
 		});
 		
 		app.initialize();
