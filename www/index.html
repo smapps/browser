@@ -1,14 +1,129 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>InAppBrowser.removeEventListener Example</title>
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-  </head>
-  <body>
-  <script>
-	udptransmit.initialize("192.168.1.23", 50000);
-	udptransmit.sendMessage("21 00 55");
-  </script>
-  <div id="button" style="height: 200px; width:200px;background-color: #FFF000;">asdfsadfasdf</div>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css">
+	    <link rel="shortcut icon" href="favicon.ico">
+	    <script src="js/jquery.js"></script>
+	    <script src="js/udptransmit.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+	    <script src="js/index.js"></script>
+	    <script src="js/jquery.mobile-1.4.3.min.js"></script>
+        <title>Hello World</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        //once the device ready event fires up, you can safely do your thing
+        function onDeviceReady(){
+                udptransmit.initialize("192.168.1.105", 5000);
+        }
+
+        function up(){
+            udptransmit.initialize("192.168.1.105", 5000);
+            udptransmit.sendMessage("w");
+        }
+
+        function down(){
+            udptransmit.initialize("192.168.1.105", 5000);
+            udptransmit.sendMessage("s");
+        }
+
+        function left(){
+            udptransmit.initialize("192.168.1.105", 5000);
+            udptransmit.sendMessage("a");
+        }
+        
+        function right(){
+            udptransmit.initialize("192.168.1.105", 5000);
+            udptransmit.sendMessage("d");
+        }
+        
+        </script>
+ 
+<!-- Start of first page: #one -->
+        <div data-role="page" id="one">
+
+	        <div data-role="header">
+		        <h1>Application</h1>
+	        </div><!-- /header -->
+
+	        <div role="main" class="ui-content">
+		        <h2 align="center">Home</h2>
+		        <p><a href="#two" class="ui-btn ui-shadow ui-corner-all" data-transition="fade">Car</a></p>
+		        <p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">About</a></p>
+	        </div><!-- /content -->
+
+	        <div data-role="footer" data-theme="a">
+		        <h4>Copyright &#174; Alin Cijov</h4>
+	        </div><!-- /footer -->
+        </div><!-- /page one -->
+
+        <!-- Start of second page: #two -->
+        <div data-role="page" id="two" data-theme="a">
+
+	        <div data-role="header">
+		        <h1>Car</h1>
+	        </div><!-- /header -->
+            
+	        <div role="main" class="ui-content">
+		        <div id="upbtn"><p align="center"><button class="ui-btn ui-icon-arrow-u ui-btn-icon-top ui-shadow ui-corner-all" style="max-width:50px;"></button></p></div>
+                    <div align="center">			        
+                    <div id="lfbtn" class="ui-btn-inline" style="margin-right:50px;"><p align="center"><button class="ui-btn ui-btn-inline ui-icon-arrow-l ui-btn-icon-top ui-shadow ui-corner-all" style="width:50px;"></button></p></div>
+			        <div id="rgbtn" class="ui-btn-inline" style="margin-right:-10px;"><p align="center"><button class="ui-btn ui-btn-inline ui-icon-arrow-r ui-btn-icon-top ui-shadow ui-corner-all" style="width:50px;"></button></p></div>		        
+                    </div>                
+                <div id="dnbtn"><p align="center"><button id="down" class="ui-btn ui-icon-arrow-d ui-btn-icon-top ui-shadow ui-corner-all" style="max-width:50px;"></button></p></div>
+		        <p><a href="#one" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b" data-transition="fade">Home</a></p>
+
+	        </div><!-- /content -->
+
+	        <div data-role="footer">
+		        <h4>Copyright &#174; Alin Cijov</h4>
+	        </div><!-- /footer -->
+        </div><!-- /page two -->
+
+        <!-- Start of third page: #popup -->
+        <div data-role="page" id="popup">
+
+	        <div data-role="header" data-theme="b">
+		        <h1>About</h1>
+	        </div><!-- /header -->
+
+	        <div role="main" class="ui-content">
+		        <h2>Alin Cijov</h2>
+		        <p>Software Engineer Undergraduate at Concordia University.</p>
+		        <p><a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left" data-transition="fade">Home</a></p>
+	        </div><!-- /content -->
+
+	        <div data-role="footer">
+		        <h4>Copyright &#174; Alin Cijov</h4>
+	        </div><!-- /footer -->
+        </div><!-- /page popup -->     
+  
+        <script>
+            var interval;
+            var childb = document.getElementById("dnbtn");
+            var childu = document.getElementById("upbtn");
+            var childl = document.getElementById("lfbtn");
+            var childr = document.getElementById("rgbtn");
+           
+            childu.addEventListener('touchstart',function(){ interval = setInterval(up, 100); });
+            childu.addEventListener('touchend',function(){ clearInterval(interval);});
+
+            childb.addEventListener('touchstart',function(){ interval = setInterval(down, 100); });
+            childb.addEventListener('touchend',function(){ clearInterval(interval);});
+
+            childl.addEventListener('touchstart',function(){ interval = setInterval(left, 100); });
+            childl.addEventListener('touchend',function(){ clearInterval(interval);});
+
+            childr.addEventListener('touchstart',function(){ interval = setInterval(right, 100); });
+            childr.addEventListener('touchend',function(){ clearInterval(interval);});
+
+
+        </script>
+    </body>
 </html>
