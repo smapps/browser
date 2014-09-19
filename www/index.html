@@ -20,26 +20,26 @@
 
         //once the device ready event fires up, you can safely do your thing
         function onDeviceReady(){
-                udptransmit.initialize("192.168.1.105", 5000);
+                udptransmit.initialize("192.168.1.87", 50000);
         }
 
         function up(){
-            udptransmit.initialize("192.168.1.105", 5000);
+            udptransmit.initialize("192.168.1.87", 50000);
             udptransmit.sendMessage("w");
         }
 
         function down(){
-            udptransmit.initialize("192.168.1.105", 5000);
+            udptransmit.initialize("192.168.1.87", 5000);
             udptransmit.sendMessage("s");
         }
 
         function left(){
-            udptransmit.initialize("192.168.1.105", 5000);
+            udptransmit.initialize("192.168.1.87", 5000);
             udptransmit.sendMessage("a");
         }
         
         function right(){
-            udptransmit.initialize("192.168.1.105", 5000);
+            udptransmit.initialize("192.168.1.87", 5000);
             udptransmit.sendMessage("d");
         }
         
