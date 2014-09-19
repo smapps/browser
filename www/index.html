@@ -2,15 +2,11 @@
 <html>
   <head>
     <title>InAppBrowser.removeEventListener Example</title>
-
-<script type="text/javascript" charset="utf-8" src="phonegap-3.5.0.js"></script>
-    <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
-	<script src="assets/js/jquery-1.10.2.js"></script>
-	<script type="text/javascript" charset="utf-8" src="assets/js/udptransmit.js"></script>	
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script type="text/javascript" charset="utf-8" src="udptransmit.js"></script>	
   </head>
   <body>
   <script>
-	var udptransmit = require('assets/js/udptransmit.js');
 	udptransmit.initialize("192.168.1.23", 50000);
 	udptransmit.sendMessage("21 00 55");
   </script>
